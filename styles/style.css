@@ -9,8 +9,7 @@
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Стили для шапки сайта */
-
+/* ниже стили для шапки */
 .header {
   position: relative;
   display: flex;
@@ -20,7 +19,6 @@
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
-  /* выше установили ограничения для секции */
 }
 
 .logo {
@@ -36,9 +34,8 @@
 }
 
 .header__title {
-  width: 730px;
-  position: absolute;
-  left: 64px;
+  max-width: 730px;
+  padding-left: 64px;
   z-index: 4;
   line-height: 96px;
   font-size: 102px;
@@ -47,7 +44,7 @@
 }
 
 .header__subtitle {
-  width: 388px;
+  max-width: 388px;
   position: absolute;
   left: 64px;
   bottom: 30px;
@@ -59,6 +56,7 @@
 }
 
 .header__link {
+  color: #2f80ed;
   text-decoration: none;
 }
 
@@ -71,7 +69,6 @@
   z-index: 2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   background-color: #2f80ed;
   height: 568px;
@@ -81,8 +78,6 @@
   top: 64px;
   z-index: 1;
 }
-
-/* Стили для секции description */
 
 .description {
   display: flex;
@@ -95,7 +90,6 @@
   justify-content: space-between;
 
   width: 80%;
-  min-height: 100%;
 }
 
 .two-columns__brief {
@@ -132,23 +126,19 @@
   font-weight: 600;
 }
 
-/* Стили для секции digits */
-
+/* ниже стили для раздела Цифры и факты */
 .section-title {
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   margin: 0 auto;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
-}
-
-.section-title_digits {
   padding-top: 100px;
 }
 
 .section-subtitle {
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   margin: 20px auto 0;
   line-height: 34px;
@@ -188,8 +178,7 @@
   margin-bottom: 0;
 }
 
-/* Стили для секции feynman */
-
+/* ниже стили для раздела Метод Феймена */
 .feynman {
   min-height: 890px;
   position: relative;
@@ -209,7 +198,6 @@
 }
 
 .feynman__subtitle {
-  width: max-content;
   margin: 0 auto;
   text-align: center;
   line-height: 51px;
@@ -222,18 +210,19 @@
   font-size: 36px;
   font-weight: normal;
   text-decoration: none;
+  color: #2f80ed;
   position: absolute;
   top: 50%;
   right: 48px;
   z-index: 1;
 }
 
-/* Стили для секции kaufman */
-
+/* ниже стили для раздела Принципы обучения */
 .kaufman {
   overflow: hidden;
-  background: url(../images/kaufman-triangle.svg) right -210px top/877px 877px no-repeat,
-    #000000;
+  background-color: #1f1f1f;
+  position: relative;
+  z-index: -2;
 }
 
 .section-title_theme_dark {
@@ -254,13 +243,23 @@
   width: 200px;
 }
 
-/* Стили для секции footer */
+.kaufman__triangle {
+  width: 877px;
+  height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: 877px 877px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: -1;
+}
 
+/* ниже стили для подвала */
 .footer {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  background-color: #000000;
+  background-color: #1f1f1f;
   color: white;
   padding: 60px 0 40px;
   min-height: 350px;
@@ -280,17 +279,17 @@
 }
 
 .footer__author {
-  margin-bottom: 18px;
+  margin: 18px 0;
 }
 
-.footer__column_heading {
+.footer__column-heading {
   margin: 0 0 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
 
-.footer__column_links {
+.footer__column-links {
   display: flex;
   flex-direction: column;
   margin: 0 0 16px;
