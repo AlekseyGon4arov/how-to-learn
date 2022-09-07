@@ -113,7 +113,7 @@
   font-size: 24px;
   font-weight: normal;
 
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .two-columns__paragraph:last-child {
@@ -222,7 +222,7 @@
   overflow: hidden;
   background-color: #1f1f1f;
   position: relative;
-  z-index: -2;
+  z-index: 0;
 }
 
 .section-title_theme_dark {
@@ -279,6 +279,9 @@
 }
 
 .footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
   margin: 18px 0;
 }
 
